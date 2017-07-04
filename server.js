@@ -42,6 +42,13 @@ app.get('/about', (req, res) => {
     })
 });
 
+app.get('/project', (req, res) => {
+    res.render('project', {
+        pageTitle: 'Project Page',
+        projectPage: 'https://github.com/bhoomij/node-course3-web-server'
+    })
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: '404. Eror page'
